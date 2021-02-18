@@ -1,0 +1,441 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+body {
+    background-image: radial-gradient(at 10% bottom, blue,white);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+section {
+    height: 100vh;
+}
+
+header {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 100;
+
+}
+
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Rubik', sans-serif;
+}
+h2{
+    font-size: 3rem;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 2rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 20px;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    text-decoration: none;
+}
+
+i {
+    font-size: 3rem;
+    margin: 5px;
+}
+
+.color-white {
+    color: white;
+}
+.absolute-position {
+    position: absolute;
+}
+
+.pointer {
+    
+        pointer-events: none;
+    
+}
+#leftBigCloud {
+    bottom: 0px;
+    left: -50%;
+    z-index: -50;
+}
+
+#rigthtBigCloud {
+    bottom: 0px;
+    right: -50%;
+}
+
+#skylines {
+    bottom: 0px;
+    z-index: -99;
+}
+
+#middleBigCloud {
+    bottom: 0px;
+    left: 30%;
+}
+
+#middleSmallCloud {
+    bottom: 0px;
+    left: 25%;
+}
+
+#leftSmallCloud {
+    bottom: 0px;
+    left: -7%;
+}
+
+#rightSmallCloud {
+   bottom: 0px;
+   right: -7%;
+    
+}
+
+#middleCloudOne {
+    top: 50%;
+    left: 15%;
+    animation: movingCloud 10s linear infinite;
+    
+}
+
+#rightFlyingCloud {
+    top: 60%;
+    right: 10%;
+    animation: third 10s linear infinite;
+}
+
+#smallestCloud {
+    top: 60%;
+    right: 10%;
+    animation: four 5s linear infinite;
+}
+
+#smallestCloudSecond {
+    top: 75%;
+    left: 20%;
+   
+   animation: secondCloud 5s linear infinite;
+}
+
+#moon {
+    top: 5%;
+    left: 10%;
+    width: 10rem;
+}
+
+#ballon-one {
+    top: 0px;
+    right: 40px;
+    opacity: .3;
+    width: 7rem;
+}
+
+#ballon-two {
+    top: 40px;
+    right: 200px;
+    opacity: .3;
+    width: 6rem;
+}
+
+
+/* THEME SWITCHER */
+
+
+
+.switch-toggle p {
+    font-size: .7rem;
+}
+
+.switch-toggle input {
+   position: absolute;
+   opacity: 0;
+}
+
+.switch-toggle input + label {
+   padding: 7px;
+  
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+}
+
+.switch-toggle input:checked + label {
+   background: grey;
+}
+
+
+
+@keyframes movingCloud {
+    0% {left: 15%;}
+    50% {left: 25%;}
+    100% {left: 15%;}
+}
+
+@keyframes secondCloud {
+    0% {left: 20%;}
+    50% {left: 25%;}
+    100% {left: 20%;}
+}
+
+@keyframes third {
+    0% {right:  10%;}
+    50% {right:  20%;}
+    100% {right:  10%;}
+}
+
+@keyframes four {
+    0% {right: 10%;}
+    50% {right: 15%;}
+    100% {right: 10%;}
+}
+
+@media only screen and (max-width: 600px) {
+   
+    * {
+        font-size: 10px;
+    }
+
+    #skylines {
+        bottom: 0px;
+        z-index: -99;
+        width: 100%;
+        margin: auto;
+    }
+
+    header {
+        display: inline-block;
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50,-50%);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    
+    }
+
+    #leftBigCloud {
+        bottom: 0px;
+        left: -50%;
+        z-index: -50;
+        width: 100%;
+    }
+    
+    #rigthtBigCloud {
+        bottom: 0px;
+        right: -50%;
+        width: 100%;
+    }
+
+    #middleBigCloud {
+        bottom: 0px;
+        left: 30%;
+    
+        width: 30%;
+    }  
+
+    
+
+    #middleSmallCloud {
+        bottom: 0px;
+        left: 25%;
+        width: 50%;
+    }
+    
+    #leftSmallCloud {
+        bottom: 0px;
+        left: -7%;
+        width:40%;
+    }
+    
+    #rightSmallCloud {
+       bottom: 0px;
+       right: -7%;
+       width: 40%;
+        
+    }
+
+    #middleCloudOne {
+        top: 20%;
+        left: 15%;
+        animation: movingCloud 6s linear infinite;
+        width: 45%;
+
+    }
+    
+    #rightFlyingCloud {
+        top: 60%;
+        right: 10%;
+        animation: four 5s linear infinite;
+        width: 45%;
+    }
+    
+    #smallestCloud {
+        top: 15%;
+        right: 15%;
+        animation: four 5s linear infinite;
+        width: 35%;
+    }
+    
+    #smallestCloudSecond {
+        top: 75%;
+        left: 20%;
+        animation: secondCloud 5s linear infinite;
+        width: 35%;
+    }
+
+    
+    .switch-toggle {
+       display: inline-block;
+       width: 100%;
+        text-align: center;
+        background: #242729;
+    }
+
+    .switch-toggle p {
+       font-size: 30px;
+    }
+
+  }
+
+  
+@media only screen and (min-width: 600px) and (max-width: 1440px) {
+
+    * {
+        font-size: 16px;
+    }
+
+    #skylines {
+        bottom: 0px;
+        z-index: -99;
+        width: 100%;
+        margin: auto;
+    }
+
+    header {
+        display: inline-block;
+        position: absolute;
+        width: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50,-50%);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    
+    }
+
+    #leftBigCloud {
+        bottom: 0px;
+        left: -50%;
+        z-index: -50;
+        width: 100%;
+    }
+    
+    #rigthtBigCloud {
+        bottom: 0px;
+        right: -50%;
+        width: 100%;
+    }
+
+    #middleBigCloud {
+        bottom: 0px;
+        left: 30%;
+    
+        width: 30%;
+    }  
+
+    
+
+    #middleSmallCloud {
+        bottom: 0px;
+        left: 25%;
+        width: 40%;
+    }
+    
+    #leftSmallCloud {
+        bottom: 0px;
+        left: -7%;
+        width:35%;
+    }
+    
+    #rightSmallCloud {
+       bottom: 0px;
+       right: -7%;
+       width: 35%;
+        
+    }
+
+    #middleCloudOne {
+        top: 20%;
+        left: 15%;
+        animation: movingCloud 6s linear infinite;
+        width: 30%;
+
+    }
+    
+    #rightFlyingCloud {
+        top: 60%;
+        right: 10%;
+        animation: four 5s linear infinite;
+        width: 30%;
+    }
+    
+    #smallestCloud {
+        top: 15%;
+        right: 15%;
+        animation: four 5s linear infinite;
+        width: 20%;
+    }
+    
+    #smallestCloudSecond {
+        top: 75%;
+        left: 20%;
+        animation: secondCloud 5s linear infinite;
+        width: 20%;
+    }
+
+    
+    .switch-toggle {
+       display: inline-block;
+       width: 100%;
+        text-align: center;
+        background: #242729;
+    }
+
+    .switch-toggle p {
+       font-size: 30px;
+    }
+    
+
+
+
+
+}
+
